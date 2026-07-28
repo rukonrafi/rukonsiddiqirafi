@@ -56,7 +56,7 @@ rafi-portfolio/
 │   │   └── favicon.svg
 │   │
 │   ├── documents/
-│   │   └── resume.pdf           ← PLACEHOLDER — replace with your real resume (see below)
+│   │   └── resume.pdf           ← PLACEHOLDER —  resume (see below)
 │   │
 │   └── fonts/                   ← Empty; site currently uses Google Fonts (Noto Sans JP,
 │                                    Space Grotesk) loaded via CDN in index.html <head>
