@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラフィ ルコン シディキ | ポートフォリオ - IT Portfolio</title>
+<meta name="description" content="ラフィ・ルコン・シディキのポートフォリオサイト。IT専門学校生・エンジニア志望。学歴、職務経験、スキル、制作実績を紹介します。">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+<!-- Google Fonts: Japanese body font + English display font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-logo">RSR</div>
+      <div class="loader-bar"><span class="loader-bar-fill"></span></div>
+      <p class="loader-text" data-ja="読み込み中..." data-en="Loading...">読み込み中...</p>
+    </div>
+  </div>
+
+  <!-- ============ ANIMATED BACKGROUND ELEMENTS ============ -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">RSR</span>
+        <span class="logo-sub" data-ja="ラフィ・ポートフォリオ" data-en="Rafi Portfolio">ラフィ・ポートフォリオ</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-ja="ホーム" data-en="Home">ホーム</a></li>
+        <li><a href="#about" class="nav-link" data-ja="自己紹介" data-en="About">自己紹介</a></li>
+        <li><a href="#education" class="nav-link" data-ja="学歴" data-en="Education">学歴</a></li>
+        <li><a href="#skills" class="nav-link" data-ja="スキル" data-en="Skills">スキル</a></li>
+        <li><a href="#experience" class="nav-link" data-ja="職務経験" data-en="Experience">職務経験</a></li>
+        <li><a href="#internships" class="nav-link" data-ja="インターン" data-en="Internships">インターン</a></li>
+        <li><a href="#projects" class="nav-link" data-ja="制作実績" data-en="Projects">制作実績</a></li>
+        <li><a href="#contact" class="nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language toggle: Japanese is default -->
+        <button id="lang-toggle" class="icon-btn lang-btn" aria-label="言語切り替え / Switch language" title="言語切り替え / Switch language">
+          <span id="lang-label">JA</span>
+        </button>
+        <!-- Dark / light mode toggle -->
+        <button id="theme-toggle" class="icon-btn theme-btn" aria-label="ダークモード切り替え" title="ダークモード切り替え">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12Zm0-14a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1Zm0 20a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1ZM4.22 5.64a1 1 0 0 1-1.42 0L1.4 4.22A1 1 0 1 1 2.82 2.8L4.24 4.22a1 1 0 0 1 0 1.42Zm16.98 16.98a1 1 0 0 1-1.42 0l-1.42-1.42a1 1 0 1 1 1.42-1.42l1.42 1.42a1 1 0 0 1 0 1.42ZM3 13H1a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2Zm20 0h-2a1 1 0 1 1 0-2h2a1 1 0 1 1 0 2ZM4.22 20.2a1 1 0 0 1 0-1.42l1.42-1.42a1 1 0 1 1 1.42 1.42l-1.42 1.42a1 1 0 0 1-1.42 0ZM18.36 5.64a1 1 0 0 1 0-1.42l1.42-1.42a1 1 0 1 1 1.42 1.42l-1.42 1.42a1 1 0 0 1-1.42 0Z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12.3 2a9.9 9.9 0 1 0 9.7 12.3 1 1 0 0 0-1.2-1.2 8 8 0 0 1-9.9-9.9A1 1 0 0 0 12.3 2Z"/></svg>
+        </button>
+        <!-- Mobile hamburger menu -->
+        <button id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+    <!-- ============ HERO SECTION ============ -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="hero-eyebrow" data-ja="ようこそ" data-en="Welcome">ようこそ</p>
+          <h1 class="hero-title">
+            <span class="hero-greeting" data-ja="こんにちは、" data-en="Hello, I'm">こんにちは、</span>
+            <span class="hero-name-line">
+              <span class="hero-name">ラフィ ルコン シディキ</span><span class="hero-name-suffix" data-ja="です" data-en="">です</span>
+            </span>
+          </h1>
+          <p class="hero-role">RAFI RUKON SIDDIQI</p>
+          <div class="hero-status" aria-label="Profile status">
+            <span class="status-dot"></span>
+            <span data-ja="STATUS：2027年卒年予定" data-en="EXPECTED GRADUATION:2027">STATUS：2027年卒年予定</span>
+            <span class="status-code"
+              data-ja="就職活動中"
+              data-en="OPEN TO WORK">就職活動中
+            </span>
+          </div>
+          <p class="hero-typing">
+            <span id="typing-text"></span><span class="typing-cursor">|</span>
+          </p>
+          <p class="hero-desc" data-ja="日本国際工科専門学校でITマネジメントを学ぶ、エンジニアを目指す学生です。自ら課題を見つけ、調べ、解決まで粘り強くやり遂げることを大切にしています。" data-en="An IT Management student in Tokyo, aiming to become a reliable systems engineer. I value finding problems on my own, researching them thoroughly, and seeing solutions through to the end.">
+            日本国際工科専門学校でITマネジメントを学ぶ、エンジニアを目指す学生です。自ら課題を見つけ、調べ、解決まで粘り強くやり遂げることを大切にしています。
+          </p>
+
+          <div class="document-panel glass">
+            <div class="document-panel-label">
+              <span class="document-kicker">APPLICATION FILES</span>
+              <span data-ja="応募書類" data-en="Documents">応募書類</span>
+            </div>
+            <div class="document-buttons">
+              <!-- Replace this PDF with your actual 履歴書 -->
+              <a href="assets/documents/resume.pdf" download class="btn btn-primary document-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V7h3.5L13 3.5ZM8 12v2h2v3h2v-3h2l-3-3-3 3h2v-2H8Zm0 7h6v-1H8v1Z"/></svg>
+                <span data-ja="履歴書" data-en="Resume">履歴書</span>
+                <small>PDF</small>
+              </a>
+              <!-- Add your 職務経歴書 PDF at assets/documents/work-history.pdf -->
+              <a href="assets/documents/work-history.pdf" download class="btn btn-document document-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm7 1.5V7h3.5L13 3.5ZM8 11h6v1.5H8V11Zm0 3h6v1.5H8V14Zm0 3h4v1.5H8V17Z"/></svg>
+                <span data-ja="職務経歴書" data-en="Work History">職務経歴書</span>
+                <small>PDF</small>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-buttons hero-actions">
+            <a href="#projects" class="btn btn-outline" data-ja="制作実績を見る" data-en="View Projects">制作実績を見る</a>
+            <a href="#contact" class="btn btn-ghost" data-ja="お問い合わせ" data-en="Contact Me">お問い合わせ</a>
+          </div>
+
+          <div class="hero-socials">
+            <!-- Add GitHub link here -->
+            <a href="https://github.com/rukonrafi" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.8 11.8 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+            <!-- Add LinkedIn link here -->
+            <a href="https://www.linkedin.com/in/rukonrafi" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.5v1.6h.05c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4A2.1 2.1 0 1 1 5.3 3.2a2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.5V9h3.6v11.4Z"/></svg>
+            </a>
+            <!-- Live demo of ClassOrbit -->
+            <a href="https://classorbit-tan.vercel.app" target="_blank" rel="noopener" class="social-btn" aria-label="ClassOrbit Web App">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.9 9h-3.4a15.4 15.4 0 0 0-1.2-5.5A8 8 0 0 1 19.9 11ZM12 4c.8 1 1.9 3.1 2.1 7H9.9c.2-3.9 1.3-6 2.1-7Zm-3.3.5A15.4 15.4 0 0 0 7.5 11H4.1a8 8 0 0 1 4.6-6.5ZM4.1 13h3.4a15.4 15.4 0 0 0 1.2 5.5A8 8 0 0 1 4.1 13Zm7.9 6.5c-.8-1-1.9-3.1-2.1-6.5h4.2c-.2 3.4-1.3 5.5-2.1 6.5Zm3.3-.5a15.4 15.4 0 0 0 1.2-6h3.4a8 8 0 0 1-4.6 6Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap reveal">
+          <div class="hero-image-frame">
+            <!-- Add profile photo here -->
+            <img src="assets/images/profile/profile-main.jpg" alt="ラフィ・ルコン・シディキのプロフィール写真" class="hero-image" width="500" height="600">
+          </div>
+          <div class="hero-badge glass">
+            <span class="badge-num">2027.3</span>
+            <span class="badge-label" data-ja="卒業見込み" data-en="Expected Graduation">卒業見込み</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="下にスクロール">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ME ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="自己紹介" data-en="About Me">自己紹介</p>
+          <h2 class="section-title" data-ja="私について" data-en="About Me">私について</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <!-- Secondary professional photo -->
+            <img src="assets/images/profile/profile-secondary.jpg" alt="オフィス街で撮影されたラフィのビジネス写真" class="about-image">
+          </div>
+
+          <div class="about-content reveal">
+            <p class="about-lead" data-ja="自ら考え、粘り強く解決する。" data-en="Think it through. See it through.">
+              自ら考え、粘り強く解決する。
+            </p>
+            <p class="about-text" data-ja="私は、自ら探し、解決できるまでやり遂げることを強みとしています。分からないことがあっても積極的に情報を収集し、自分なりに考えながら解決策を見つけることを心掛けています。アルバイトではお客様やスタッフとのコミュニケーションを大切にし、責任感を持って業務に取り組んできました。" data-en="My strength is seeing things through — searching for answers myself and following a problem all the way to its solution. Even when something is unfamiliar, I actively gather information and think it through in my own way. Through part-time work, I've placed real value on communicating well with customers and colleagues, and on carrying out my responsibilities with care.">
+              私は、自ら探し、解決できるまでやり遂げることを強みとしています。分からないことがあっても積極的に情報を収集し、自分なりに考えながら解決策を見つけることを心掛けています。アルバイトではお客様やスタッフとのコミュニケーションを大切にし、責任感を持って業務に取り組んできました。
+            </p>
+            <p class="about-text" data-ja="専門学校ではITマネジメントを学びながら、HTML・CSS・VBAやMicrosoft Office（Excel・Word・PowerPoint）を活用しています。また、Java・JavaScript・Pythonについても継続的に学習し、GitHubを活用しながらスキル向上に努めています。今後も新しい知識や技術を積極的に学び続け、周囲と協力しながら成長し、技術力とコミュニケーション力を兼ね備えたエンジニアを目指しています。" data-en="At my technical college, I'm studying IT Management while working with HTML, CSS, VBA, and Microsoft Office (Excel, Word, PowerPoint). I also continue learning Java, JavaScript, and Python on my own, using GitHub to keep improving. Going forward, I want to keep learning new technologies, grow alongside the people around me, and become an engineer who combines strong technical skills with strong communication.">
+              専門学校ではITマネジメントを学びながら、HTML・CSS・VBAやMicrosoft Office（Excel・Word・PowerPoint）を活用しています。また、Java・JavaScript・Pythonについても継続的に学習し、GitHubを活用しながらスキル向上に努めています。今後も新しい知識や技術を積極的に学び続け、周囲と協力しながら成長し、技術力とコミュニケーション力を兼ね備えたエンジニアを目指しています。
+            </p>
+
+            <!-- ===== Personal Information Card (safe public info only) ===== -->
+            <div class="info-card glass">
+              <div class="info-row">
+                <span class="info-label" data-ja="氏名" data-en="Name">氏名</span>
+                <span class="info-value">RAFI RUKON SIDDIQI（ラフィ・ルコン・シディキ）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label" data-ja="国籍" data-en="Nationality">国籍</span>
+                <span class="info-value" data-ja="バングラデシュ" data-en="Bangladeshi">バングラデシュ</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label" data-ja="居住地" data-en="Location">居住地</span>
+                <span class="info-value" data-ja="東京都在住" data-en="Tokyo, Japan">東京都在住</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label" data-ja="現在の身分" data-en="Current Status">現在の身分</span>
+                <span class="info-value" data-ja="専門学校生（ITマネジメントコース）" data-en="IT College Student (IT Management Course)">専門学校生（ITマネジメントコース）</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label" data-ja="卒業見込み" data-en="Expected Graduation">卒業見込み</span>
+                <span class="info-value" data-ja="2027年3月" data-en="March 2027">2027年3月</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label" data-ja="趣味" data-en="Hobbies">趣味</span>
+                <span class="info-value" data-ja="旅行、映画鑑賞" data-en="Traveling, Watching Movies">旅行、映画鑑賞</span>
+              </div>
+            </div>
+            <p class="privacy-note" data-ja="※ 住所・電話番号・生年月日などの個人情報は、プライバシー保護のため非公開としています。" data-en="※ For privacy reasons, personal details such as home address, phone number, and date of birth are not published here.">
+              ※ 住所・電話番号・生年月日などの個人情報は、プライバシー保護のため非公開としています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION TIMELINE ============ -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="学歴" data-en="Education">学歴</p>
+          <h2 class="section-title" data-ja="学びの歩み" data-en="Education Timeline">学びの歩み</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">2015.1 – 2020.7</span>
+              <h3 class="timeline-title">Char Lawrence High School</h3>
+              <p class="timeline-place" data-ja="バングラデシュ" data-en="Bangladesh">バングラデシュ</p>
+              <p class="timeline-desc" data-ja="高等学校課程を修了。" data-en="Completed secondary school education.">高等学校課程を修了。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">2021.1 – 2022.12</span>
+              <h3 class="timeline-title">Sonapur College</h3>
+              <p class="timeline-place" data-ja="バングラデシュ" data-en="Bangladesh">バングラデシュ</p>
+              <p class="timeline-desc" data-ja="高等教育課程（カレッジ）を修了。" data-en="Completed college-level studies.">高等教育課程（カレッジ）を修了。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">2023.10 – 2025.3</span>
+              <h3 class="timeline-title" data-ja="東京外語教育学院" data-en="Tokyo Gaigo Kyoiku Gakuin">東京外語教育学院</h3>
+              <p class="timeline-place" data-ja="東京都" data-en="Tokyo, Japan">東京都</p>
+              <p class="timeline-desc" data-ja="日本語教育課程を修了し、来日後の生活・学業の土台となる日本語力を習得。" data-en="Completed a Japanese language program, building the foundation for study and life in Japan.">日本語教育課程を修了し、来日後の生活・学業の土台となる日本語力を習得。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal timeline-item-current">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">2025.4 – 2027.3 <span class="tag-current" data-ja="在学中" data-en="In Progress">在学中</span></span>
+              <h3 class="timeline-title" data-ja="日本国際工科専門学校" data-en="Nihon Kokusai Koka Senmon Gakko">日本国際工科専門学校</h3>
+              <p class="timeline-place" data-ja="ビジネススペシャリスト科　ITマネジメントコース" data-en="Business Specialist Dept. — IT Management Course">ビジネススペシャリスト科　ITマネジメントコース</p>
+              <p class="timeline-desc" data-ja="HTML・CSS・Java・JavaScript・Python・Excel VBAなどを学びながら、ITマネジメントの実践力を養成中。2027年3月卒業見込み。" data-en="Currently studying HTML, CSS, Java, JavaScript, Python, and Excel VBA while building practical IT management skills. Expected to graduate in March 2027.">HTML・CSS・Java・JavaScript・Python・Excel VBAなどを学びながら、ITマネジメントの実践力を養成中。2027年3月卒業見込み。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TECHNICAL SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="スキル" data-en="Skills">スキル</p>
+          <h2 class="section-title" data-ja="テクニカルスキル" data-en="Technical Skills">テクニカルスキル</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card glass reveal">
+            <h3 class="skill-cat-title" data-ja="フロントエンド" data-en="Frontend">フロントエンド</h3>
+            <ul class="skill-list">
+              <li><span>HTML</span><span class="skill-level" data-ja="実務経験あり" data-en="Practical Experience">実務経験あり</span></li>
+              <li><span>CSS</span><span class="skill-level" data-ja="実務経験あり" data-en="Practical Experience">実務経験あり</span></li>
+              <li><span>JavaScript</span><span class="skill-level" data-ja="プロジェクト経験あり" data-en="Project Experience">プロジェクト経験あり</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <h3 class="skill-cat-title" data-ja="プログラミング" data-en="Programming">プログラミング</h3>
+            <ul class="skill-list">
+              <li><span>Java</span><span class="skill-level" data-ja="学習中" data-en="Learning">学習中</span></li>
+              <li><span>Python</span><span class="skill-level" data-ja="学習中" data-en="Learning">学習中</span></li>
+              <li><span>JavaScript</span><span class="skill-level" data-ja="プロジェクト経験あり" data-en="Project Experience">プロジェクト経験あり</span></li>
+              <li><span>Excel VBA</span><span class="skill-level" data-ja="習熟" data-en="Familiar">習熟</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <h3 class="skill-cat-title" data-ja="ツール" data-en="Tools">ツール</h3>
+            <ul class="skill-list">
+              <li><span>GitHub</span><span class="skill-level" data-ja="実務経験あり" data-en="Practical Experience">実務経験あり</span></li>
+              <li><span>Claude AI</span><span class="skill-level" data-ja="活用中" data-en="Actively Using">活用中</span></li>
+              <li><span>Visual Studio Code</span><span class="skill-level" data-ja="実務経験あり" data-en="Practical Experience">実務経験あり</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <h3 class="skill-cat-title" data-ja="オフィスソフト" data-en="Office">オフィスソフト</h3>
+            <ul class="skill-list">
+              <li><span>Microsoft Word</span><span class="skill-level" data-ja="習熟" data-en="Familiar">習熟</span></li>
+              <li><span>Microsoft Excel</span><span class="skill-level" data-ja="習熟" data-en="Familiar">習熟</span></li>
+              <li><span>Microsoft PowerPoint</span><span class="skill-level" data-ja="習熟" data-en="Familiar">習熟</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Language Skills -->
+        <div class="lang-skills reveal">
+          <h3 class="skill-cat-title" data-ja="言語スキル" data-en="Language Skills">言語スキル</h3>
+          <div class="lang-grid">
+            <div class="lang-card glass">
+              <span class="lang-name" data-ja="ベンガル語" data-en="Bengali">ベンガル語</span>
+              <span class="lang-level" data-ja="ネイティブ" data-en="Native">ネイティブ</span>
+            </div>
+            <div class="lang-card glass">
+              <span class="lang-name" data-ja="ヒンディー語" data-en="Hindi">ヒンディー語</span>
+              <span class="lang-level" data-ja="上級" data-en="Advanced">上級</span>
+            </div>
+            <div class="lang-card glass">
+              <span class="lang-name" data-ja="ウルドゥー語" data-en="Urdu">ウルドゥー語</span>
+              <span class="lang-level" data-ja="上級" data-en="Advanced">上級</span>
+            </div>
+            <div class="lang-card glass">
+              <span class="lang-name" data-ja="英語" data-en="English">英語</span>
+              <span class="lang-level" data-ja="日常会話" data-en="Daily Conversation">日常会話</span>
+            </div>
+            <div class="lang-card glass">
+              <span class="lang-name" data-ja="日本語" data-en="Japanese">日本語</span>
+              <span class="lang-level">N3–N2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK EXPERIENCE ============ -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="職務経験" data-en="Experience">職務経験</p>
+          <h2 class="section-title" data-ja="アルバイト・実務経験" data-en="Work Experience">アルバイト・実務経験</h2>
+        </div>
+
+        <div class="exp-list">
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <h3 class="exp-company">セブンイレブン 江戸川店</h3>
+              <span class="exp-period">2023.01 – 2023.06</span>
+            </div>
+            <p class="exp-role" data-ja="アルバイトスタッフ" data-en="Part-time Staff">アルバイトスタッフ</p>
+            <ul class="exp-list-detail">
+              <li data-ja="レジ対応、接客、品出し、検品など店舗運営業務全般を担当" data-en="Handled cash register operations, customer service, shelf stocking, and product inspection as part of overall store operations">レジ対応、接客、品出し、検品など店舗運営業務全般を担当</li>
+              <li data-ja="従業員研修プログラム「フレンドリーコース」を修了し、サービス品質向上に貢献" data-en="Completed the in-house 'Friendly Course' training program, contributing to improved service quality">従業員研修プログラム「フレンドリーコース」を修了し、サービス品質向上に貢献</li>
+            </ul>
+            <div class="exp-skills">
+              <span class="tag" data-ja="接客" data-en="Customer Service">接客</span>
+              <span class="tag" data-ja="コミュニケーション" data-en="Communication">コミュニケーション</span>
+              <span class="tag" data-ja="店舗運営" data-en="Store Operations">店舗運営</span>
+            </div>
+          </div>
+
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <h3 class="exp-company">くら寿司</h3>
+              <span class="exp-period">2023.12 – 2024.02</span>
+            </div>
+            <p class="exp-role" data-ja="アルバイトスタッフ（調理補助）" data-en="Part-time Staff (Kitchen Assistant)">アルバイトスタッフ（調理補助）</p>
+            <ul class="exp-list-detail">
+              <li data-ja="寿司の製造・調理補助を担当" data-en="Assisted with sushi preparation and cooking">寿司の製造・調理補助を担当</li>
+              <li data-ja="厨房内の衛生管理全般を徹底し、安全な調理環境の維持に貢献" data-en="Maintained thorough kitchen hygiene standards, helping ensure a safe cooking environment">厨房内の衛生管理全般を徹底し、安全な調理環境の維持に貢献</li>
+            </ul>
+            <div class="exp-skills">
+              <span class="tag" data-ja="衛生管理" data-en="Hygiene Management">衛生管理</span>
+              <span class="tag" data-ja="チームワーク" data-en="Teamwork">チームワーク</span>
+              <span class="tag" data-ja="正確性" data-en="Attention to Detail">正確性</span>
+            </div>
+          </div>
+
+          <div class="exp-card glass reveal">
+            <div class="exp-card-head">
+              <h3 class="exp-company">Janani General Hospital</h3>
+              <span class="exp-period">2024.02 – <span data-ja="現在" data-en="Present">現在</span></span>
+            </div>
+            <p class="exp-role" data-ja="事務・ITサポート担当" data-en="Office Administration & IT Support">事務・ITサポート担当</p>
+            <ul class="exp-list-detail">
+              <li data-ja="病院内での事務作業およびITサポート業務全般を担当" data-en="Handled general office administration and IT support work within the hospital">病院内での事務作業およびITサポート業務全般を担当</li>
+              <li data-ja="ネットワークの簡易保守やPCのトラブルシューティングを実施" data-en="Performed basic network maintenance and PC troubleshooting">ネットワークの簡易保守やPCのトラブルシューティングを実施</li>
+              <li data-ja="環境：Office 2000/2003、Windows XP Desktop" data-en="Environment: Office 2000/2003, Windows XP Desktop">環境：Office 2000/2003、Windows XP Desktop</li>
+            </ul>
+            <div class="exp-skills">
+              <span class="tag">IT Support</span>
+              <span class="tag" data-ja="トラブルシューティング" data-en="Troubleshooting">トラブルシューティング</span>
+              <span class="tag" data-ja="ネットワーク保守" data-en="Network Maintenance">ネットワーク保守</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERNSHIP EXPERIENCE ============ -->
+    <section id="internships" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="インターンシップ" data-en="Internships">インターンシップ</p>
+          <h2 class="section-title" data-ja="1日インターンシップ経験" data-en="One-Day Internship Experience">1日インターンシップ経験</h2>
+        </div>
+
+        <div class="intern-grid">
+          <div class="intern-card glass reveal">
+            <div class="intern-icon">🖥️</div>
+            <h3 class="intern-company" data-ja="株式会社ジムマネジメント" data-en="Gym Management Co., Ltd.">株式会社ジムマネジメント</h3>
+            <p class="intern-role" data-ja="インフラエンジニア職場体験" data-en="Infrastructure Engineer (Job Experience)">インフラエンジニア職場体験</p>
+            <ul class="intern-points">
+              <li data-ja="Linux環境でのシステム運用を体験" data-en="Experienced system operations in a Linux environment">Linux環境でのシステム運用を体験</li>
+              <li data-ja="UNIXの基本操作を学習" data-en="Learned basic UNIX operations">UNIXの基本操作を学習</li>
+              <li data-ja="自動化業務の基礎に触れる" data-en="Got a first look at the basics of automation work">自動化業務の基礎に触れる</li>
+            </ul>
+          </div>
+
+          <div class="intern-card glass reveal">
+            <div class="intern-icon">🤖</div>
+            <h3 class="intern-company" data-ja="エーアイテクノロジー株式会社" data-en="AI Technology Co., Ltd.">エーアイテクノロジー株式会社</h3>
+            <p class="intern-role" data-ja="システムエンジニア職場体験" data-en="System Engineer (Job Experience)">システムエンジニア職場体験</p>
+            <ul class="intern-points">
+              <li data-ja="Pythonを用いたプログラミング演習を体験" data-en="Experienced programming exercises using Python">Pythonを用いたプログラミング演習を体験</li>
+              <li data-ja="HTMLを用いたWebページ作成を学習" data-en="Learned to build web pages using HTML">HTMLを用いたWebページ作成を学習</li>
+              <li data-ja="システム開発の基礎に触れる" data-en="Got a first look at the basics of system development">システム開発の基礎に触れる</li>
+            </ul>
+          </div>
+
+          <div class="intern-card glass reveal">
+            <div class="intern-icon">🤝</div>
+            <h3 class="intern-company">株式会社Q'sfix</h3>
+            <p class="intern-role" data-ja="システムエンジニア職場体験" data-en="System Engineer (Job Experience)">システムエンジニア職場体験</p>
+            <ul class="intern-points">
+              <li data-ja="チームで協力しながら業務を進める大切さを学習" data-en="Learned the importance of working cooperatively as part of a team">チームで協力しながら業務を進める大切さを学習</li>
+              <li data-ja="報告・連絡・相談を意識したコミュニケーションを実践" data-en="Practiced communication with a focus on timely reporting and consultation">報告・連絡・相談を意識したコミュニケーションを実践</li>
+              <li data-ja="業務の中でのストレスへの向き合い方や柔軟な対応力を学習" data-en="Learned how to manage work-related stress and respond flexibly">業務の中でのストレスへの向き合い方や柔軟な対応力を学習</li>
+            </ul>
+          </div>
+
+          <div class="intern-card glass reveal">
+            <div class="intern-icon">💻</div>
+            <h3 class="intern-company" data-ja="株式会社TACSOL" data-en="TACSOL Co., Ltd.">株式会社TACSOL</h3>
+            <p class="intern-role" data-ja="プログラマー職場体験" data-en="Programmer (Job Experience)">プログラマー職場体験</p>
+            <ul class="intern-points">
+              <li data-ja="AIを活用し、コンビニの在庫管理・廃棄管理システムの画面設計を体験" data-en="Used AI tools to design screens for a convenience store inventory and disposal management system">AIを活用し、コンビニの在庫管理・廃棄管理システムの画面設計を体験</li>
+              <li data-ja="グループワークを通じて、チームでの課題解決とプレゼンテーションを実践" data-en="Practiced team-based problem solving and presentation through group work">グループワークを通じて、チームでの課題解決とプレゼンテーションを実践</li>
+              <li data-ja="社員・社長との交流を通じて、実務におけるAI活用やエンジニアの考え方を学習" data-en="Learned about practical AI use and engineering mindsets through discussions with employees and the company president">社員・社長との交流を通じて、実務におけるAI活用やエンジニアの考え方を学習</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS & TRAINING ============ -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="資格・研修" data-en="Certifications">資格・研修</p>
+          <h2 class="section-title" data-ja="資格・研修・強み" data-en="Certifications & Training">資格・研修・強み</h2>
+        </div>
+
+        <div class="cert-grid">
+          <div class="cert-card glass reveal">
+            <div class="cert-icon">🎓</div>
+            <h3 data-ja="フレンドリーコース修了" data-en="'Friendly Course' Completion">フレンドリーコース修了</h3>
+            <p data-ja="セブンイレブンの従業員研修プログラムを修了し、接客品質の向上に貢献しました。" data-en="Completed 7-Eleven's in-house employee training program, contributing to improved customer service quality.">セブンイレブンの従業員研修プログラムを修了し、接客品質の向上に貢献しました。</p>
+          </div>
+          <div class="cert-card glass reveal">
+            <div class="cert-icon">💬</div>
+            <h3 data-ja="コミュニケーション能力" data-en="Communication Skills">コミュニケーション能力</h3>
+            <p data-ja="アルバイトや職場体験を通じて、相手の立場に立った対話力を磨いてきました。" data-en="Developed strong interpersonal communication skills through part-time work and internship experiences.">アルバイトや職場体験を通じて、相手の立場に立った対話力を磨いてきました。</p>
+          </div>
+          <div class="cert-card glass reveal">
+            <div class="cert-icon">⏱️</div>
+            <h3 data-ja="時間管理能力" data-en="Time Management">時間管理能力</h3>
+            <p data-ja="学業とアルバイトを両立させる中で、計画的に物事を進める力を身につけました。" data-en="Balancing academics with part-time work has helped me develop strong, disciplined time-management skills.">学業とアルバイトを両立させる中で、計画的に物事を進める力を身につけました。</p>
+          </div>
+        </div>
+
+        <!-- Strengths -->
+        <div class="strengths reveal">
+          <h3 class="skill-cat-title" data-ja="私の強み" data-en="My Strengths">私の強み</h3>
+          <div class="strength-tags">
+            <span class="strength-tag" data-ja="問題解決力" data-en="Problem-Solving">問題解決力</span>
+            <span class="strength-tag" data-ja="自己学習力" data-en="Self-Learning">自己学習力</span>
+            <span class="strength-tag" data-ja="チームワーク" data-en="Teamwork">チームワーク</span>
+            <span class="strength-tag" data-ja="リーダーシップ" data-en="Leadership">リーダーシップ</span>
+            <span class="strength-tag" data-ja="コミュニケーション力" data-en="Communication">コミュニケーション力</span>
+            <span class="strength-tag" data-ja="責任感" data-en="Responsibility">責任感</span>
+            <span class="strength-tag" data-ja="柔軟性" data-en="Adaptability">柔軟性</span>
+            <span class="strength-tag" data-ja="時間管理力" data-en="Time Management">時間管理力</span>
+            <span class="strength-tag" data-ja="多言語コミュニケーション" data-en="Multilingual Communication">多言語コミュニケーション</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="制作実績" data-en="Projects">制作実績</p>
+          <h2 class="section-title" data-ja="制作実績" data-en="Featured Projects">制作実績</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: ClassOrbit -->
+          <article class="project-card glass reveal"
+            data-details-ja="主な機能：リアルタイムのお知らせ、グループチャット、ダイレクトメッセージ、ファイル共有、通知、出席管理。チームリーダーとして企画、画面設計、開発の進行管理を担当しました。"
+            data-details-en="Key features: real-time announcements, group chat, direct messages, file sharing, notifications, and attendance management. As Team Leader, I handled planning, UI design, and development coordination.">
+            <div class="project-image-wrap">
+              <!-- Add project image here -->
+              <img src="assets/images/projects/classorbit-preview.jpg" alt="ClassOrbitプロジェクトのスクリーンショット" class="project-image">
+              <div class="project-logo-badge">
+                <img src="assets/images/projects/classorbit-logo.png" alt="ClassOrbitプロジェクトのロゴ">
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">ClassOrbit</h3>
+              <p class="project-tagline" data-ja="先生と生徒をつなぐ、教室コミュニケーションWebアプリ" data-en="A classroom communication web app connecting teachers and students">先生と生徒をつなぐ、教室コミュニケーションWebアプリ</p>
+              <p class="project-desc" data-ja="学校の授業プロジェクトとして開発した、教室内のコミュニケーションを円滑にするWebアプリケーションです。チームリーダーとして開発全体を牽引し、メンバーと密に意見を交わしながら課題解決を進めました。" data-en="A web application developed as a school project to make classroom communication smoother between teachers and students. I led the project as Team Leader, working closely with teammates to solve challenges throughout development.">
+                学校の授業プロジェクトとして開発した、教室内のコミュニケーションを円滑にするWebアプリケーションです。チームリーダーとして開発全体を牽引し、メンバーと密に意見を交わしながら課題解決を進めました。
+              </p>
+              <div class="project-role">
+                <span class="tag tag-highlight" data-ja="役割：チームリーダー" data-en="Role: Team Leader">役割：チームリーダー</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag" data-ja="チーム開発" data-en="Team Development">チーム開発</span>
+              </div>
+              <div class="project-links">
+                <!-- Add GitHub project link here -->
+                <a href="https://github.com/rukonrafi" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+                <!-- Live demo link -->
+                <a href="https://classorbit-tan.vercel.app" target="_blank" rel="noopener" class="btn btn-sm btn-primary" data-ja="ライブデモ" data-en="Live Demo">ライブデモ</a>
+                <button type="button" class="btn btn-sm btn-ghost project-details-btn" data-ja="詳細" data-en="Details">詳細</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: RSR Scanner -->
+          <article class="project-card glass reveal"
+            data-details-ja="主な機能：カメラによるリアルタイム読み取り、画像アップロードからの読み取り、QRコードとバーコードの判別、結果のコピー・クリア、エラー表示、レスポンシブ対応。"
+            data-details-en="Key features: real-time camera scanning, scanning from uploaded images, QR/barcode detection, copy and clear actions, error feedback, and responsive design.">
+            <div class="project-image-wrap">
+              <!-- Add project image here -->
+              <img src="assets/images/projects/rsr-scanner-preview.jpg" alt="RSR Scannerアプリケーションのプレビュー画像" class="project-image">
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">RSR Scanner</h3>
+              <p class="project-tagline" data-ja="QRコード・バーコードスキャナー" data-en="QR Code & Barcode Scanner">QRコード・バーコードスキャナー</p>
+              <p class="project-desc" data-ja="カメラを使ったリアルタイムスキャンと画像アップロードの両方に対応した、QRコード・バーコード読み取りアプリです。読み取り結果のコピー・クリア機能を備え、あらゆる画面サイズに対応するレスポンシブなインターフェースを実装しました。" data-en="A QR code and barcode scanning app supporting both real-time camera scanning and image-upload scanning. It includes copy and clear functions for scan results, with a responsive interface that adapts to any screen size.">
+                カメラを使ったリアルタイムスキャンと画像アップロードの両方に対応した、QRコード・バーコード読み取りアプリです。読み取り結果のコピー・クリア機能を備え、あらゆる画面サイズに対応するレスポンシブなインターフェースを実装しました。
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag" data-ja="カメラAPI" data-en="Camera API">カメラAPI</span>
+              </div>
+              <div class="project-links">
+                <!-- GitHub link: replace # with your RSR Scanner repository URL -->
+                <span class="btn btn-sm btn-outline btn-disabled" aria-disabled="true" data-ja="GitHub（準備中）" data-en="GitHub (Coming Soon)">GitHub（準備中）</span>
+                <!-- Live demo link: replace # with your deployed RSR Scanner URL -->
+                <span class="btn btn-sm btn-primary btn-disabled" aria-disabled="true" data-ja="ライブデモ（準備中）" data-en="Live Demo (Coming Soon)">ライブデモ（準備中）</span>
+                <button type="button" class="btn btn-sm btn-ghost project-details-btn" data-ja="詳細" data-en="Details">詳細</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</p>
+          <h2 class="section-title" data-ja="お気軽にご連絡ください" data-en="Get in Touch">お気軽にご連絡ください</h2>
+          <p class="section-sub" data-ja="ポートフォリオをご覧いただき、誠にありがとうございます。採用選考や面接、会社説明会に関するご連絡をいただけますと幸いです。" data-en="Thank you very much for taking the time to view my portfolio. I would be grateful to hear from you regarding recruitment opportunities, interviews, or company information sessions.">ポートフォリオをご覧いただき、誠にありがとうございます。採用選考や面接、会社説明会に関するご連絡をいただけますと幸いです。</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-info-item glass">
+              <span class="contact-icon">📍</span>
+              <div>
+                <p class="contact-label" data-ja="所在地" data-en="Location">所在地</p>
+                <p class="contact-value" data-ja="東京都、日本" data-en="Tokyo, Japan">東京都、日本</p>
+              </div>
+            </div>
+            <div class="contact-info-item glass">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <p class="contact-label" data-ja="メール" data-en="Email">メール</p>
+                <!-- Update email address here if needed -->
+                <p class="contact-value"><a href="mailto:rokonrafi777@gmail.com">rokonrafi777@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item glass">
+              <span class="contact-icon">🔗</span>
+              <div>
+                <p class="contact-label" data-ja="ソーシャル" data-en="Social">ソーシャル</p>
+                <p class="contact-value">
+                  <a href="https://github.com/rukonrafi" target="_blank" rel="noopener">GitHub</a> ・
+                  <a href="https://www.linkedin.com/in/rukonrafi" target="_blank" rel="noopener">LinkedIn</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form glass reveal"
+            action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="0c780eb6-c1de-47fe-8908-c8ff14b083cd">
+            <input type="hidden" name="from_name" value="Rafi Portfolio Contact">
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+            <div class="form-group">
+              <label for="name" data-ja="お名前" data-en="Name">お名前</label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+              <span class="form-error" data-ja="お名前を入力してください。" data-en="Please enter your name.">お名前を入力してください。</span>
+            </div>
+            <div class="form-group">
+              <label for="email" data-ja="メールアドレス" data-en="Email Address">メールアドレス</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <span class="form-error" data-ja="有効なメールアドレスを入力してください。" data-en="Please enter a valid email address.">有効なメールアドレスを入力してください。</span>
+            </div>
+            <div class="form-group">
+              <label for="subject" data-ja="件名" data-en="Subject">件名</label>
+              <input type="text" id="subject" name="subject" required>
+              <span class="form-error" data-ja="件名を入力してください。" data-en="Please enter a subject.">件名を入力してください。</span>
+            </div>
+            <div class="form-group">
+              <label for="message" data-ja="メッセージ" data-en="Message">メッセージ</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="form-error" data-ja="メッセージを入力してください。" data-en="Please enter a message.">メッセージを入力してください。</span>
+            </div>
+            <button type="submit" id="contact-submit" class="btn btn-primary btn-block" data-ja="送信する" data-en="Send Message">送信する</button>
+            <p class="form-note" data-ja="※ 送信内容は安全にメールで届けられます。" data-en="※ Your message will be delivered securely by email.">
+              ※ 送信内容は安全にメールで届けられます。
+            </p>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project details modal -->
+  <div id="project-modal" class="project-modal" hidden>
+    <div class="project-modal-backdrop" data-modal-close></div>
+    <section class="project-modal-dialog glass" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" tabindex="-1">
+      <button type="button" class="project-modal-close" data-modal-close aria-label="Close">&times;</button>
+      <img id="project-modal-image" class="project-modal-image" src="" alt="">
+      <div class="project-modal-content">
+        <p class="section-eyebrow" data-ja="プロジェクト詳細" data-en="Project Details">プロジェクト詳細</p>
+        <h2 id="project-modal-title" class="project-modal-title"></h2>
+        <p id="project-modal-tagline" class="project-modal-tagline"></p>
+        <p id="project-modal-description" class="project-modal-description"></p>
+        <p id="project-modal-extra" class="project-modal-extra"></p>
+        <div id="project-modal-tags" class="project-tags"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">RSR</span>
+        </a>
+        <p data-ja="IT専門学校生 / エンジニア志望" data-en="IT Student / Aspiring Systems Engineer">IT専門学校生 / エンジニア志望</p>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-ja="クイックリンク" data-en="Quick Links">クイックリンク</h4>
+        <a href="#about" data-ja="自己紹介" data-en="About">自己紹介</a>
+        <a href="#skills" data-ja="スキル" data-en="Skills">スキル</a>
+        <a href="#projects" data-ja="制作実績" data-en="Projects">制作実績</a>
+        <a href="#contact" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+      </div>
+
+      <div class="footer-social">
+        <h4 data-ja="ソーシャル" data-en="Social">ソーシャル</h4>
+        <a href="https://github.com/rukonrafi" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rukonrafi" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="current-year"></span> Rafi Rukon Siddiqi. <span data-ja="全著作権所有" data-en="All rights reserved.">全著作権所有</span></p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="ページ上部に戻る">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    /*
+      Critical-controls fallback.
+      This keeps theme, language and back-to-top controls working even when a
+      browser blocks the external JavaScript file in local file/preview mode.
+    */
+    window.addEventListener('load', function () {
+      var root = document.documentElement;
+      var themeButton = document.getElementById('theme-toggle');
+      var languageButton = document.getElementById('lang-toggle');
+      var languageLabel = document.getElementById('lang-label');
+      var topButton = document.getElementById('back-to-top');
+      var menuButton = document.getElementById('hamburger');
+      var menu = document.getElementById('nav-links');
+      var menuBackdrop = document.getElementById('nav-backdrop');
+      var fallbackForm = document.getElementById('contact-form');
+      var currentLanguage = root.lang === 'en' ? 'en' : 'ja';
+
+      if (themeButton && themeButton.dataset.bound !== 'true') {
+        themeButton.addEventListener('click', function () {
+          var nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+        });
+      }
+
+      if (languageButton && languageLabel && languageButton.dataset.bound !== 'true') {
+        languageButton.addEventListener('click', function () {
+          currentLanguage = currentLanguage === 'ja' ? 'en' : 'ja';
+          root.lang = currentLanguage;
+          languageLabel.textContent = currentLanguage === 'en' ? 'EN' : 'JA';
+
+          document.querySelectorAll('[data-ja][data-en]').forEach(function (element) {
+            var text = element.getAttribute('data-' + currentLanguage);
+            if (text !== null) element.textContent = text;
+          });
+        });
+      }
+
+      function updateTopButton() {
+        if (topButton) topButton.classList.toggle('show', window.scrollY > 500);
+      }
+
+      if (topButton && topButton.dataset.bound !== 'true') {
+        window.addEventListener('scroll', updateTopButton);
+        updateTopButton();
+        topButton.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      if (menuButton && menu && menuButton.dataset.bound !== 'true') {
+        function setFallbackMenu(isOpen) {
+          menu.classList.toggle('open', isOpen);
+          menuButton.classList.toggle('active', isOpen);
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+          if (menuBackdrop) menuBackdrop.classList.toggle('show', isOpen);
+          document.body.classList.toggle('menu-open', isOpen);
+        }
+
+        menuButton.addEventListener('click', function () {
+          setFallbackMenu(!menu.classList.contains('open'));
+        });
+        menu.querySelectorAll('.nav-link').forEach(function (link) {
+          link.addEventListener('click', function () { setFallbackMenu(false); });
+        });
+        if (menuBackdrop) {
+          menuBackdrop.addEventListener('click', function () { setFallbackMenu(false); });
+        }
+      }
+
+      /*
+        Contact fallback: prevents direct navigation to api.web3forms.com when
+        the external script is blocked by local file/preview mode.
+      */
+      if (fallbackForm && fallbackForm.dataset.bound !== 'true') {
+        fallbackForm.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          var submitButton = document.getElementById('contact-submit');
+          var status = document.getElementById('form-status');
+          var requiredFields = fallbackForm.querySelectorAll('[required]');
+          var valid = true;
+
+          requiredFields.forEach(function (field) {
+            if (!field.value.trim() || (field.type === 'email' && !field.validity.valid)) {
+              valid = false;
+              var group = field.closest('.form-group');
+              if (group) group.classList.add('error');
+            }
+          });
+
+          if (!valid) {
+            status.textContent = currentLanguage === 'en'
+              ? 'Please fill in all required fields correctly.'
+              : '必須項目を正しく入力してください。';
+            status.className = 'form-status show error';
+            return;
+          }
+
+          submitButton.disabled = true;
+          submitButton.textContent = currentLanguage === 'en' ? 'Sending...' : '送信中...';
+
+          try {
+            var response = await fetch(fallbackForm.action, {
+              method: 'POST',
+              body: new FormData(fallbackForm),
+              headers: { Accept: 'application/json' }
+            });
+            var result = await response.json();
+            if (!response.ok || !result.success) throw new Error('Submission failed');
+
+            status.textContent = currentLanguage === 'en'
+              ? 'Message sent successfully. Thank you!'
+              : 'メッセージを送信しました。ありがとうございます！';
+            status.className = 'form-status show success';
+            fallbackForm.reset();
+          } catch (error) {
+            status.textContent = currentLanguage === 'en'
+              ? 'Could not send from this preview. Please deploy the site or use Live Server and try again.'
+              : 'このプレビューから送信できません。サイトを公開するか、Live Serverを使用して再度お試しください。';
+            status.className = 'form-status show error';
+          } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = currentLanguage === 'en' ? 'Send Message' : '送信する';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
